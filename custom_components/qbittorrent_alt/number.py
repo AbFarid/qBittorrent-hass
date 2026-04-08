@@ -61,7 +61,7 @@ NUMBER_TYPES: tuple[QBittorrentNumberEntityDescription, ...] = (
         ]
         / 1024,
         set_value_fn=lambda coordinator,
-        value: coordinator.client.transfer.set_download_limit(value * 1024),
+        value: coordinator.client.transfer.set_upload_limit(value * 1024),
         entity_category=EntityCategory.CONFIG,
         entity_registry_enabled_default=False,
     ),
